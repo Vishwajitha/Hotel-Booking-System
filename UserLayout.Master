@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserLayout.master.cs" Inherits="WebApplicationDBMS.UserLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/ccc8afe9-90d8-49b5-9552-1ba839f654ef.png');
+            background-repeat: no-repeat;
+             background-size: cover; /* Scale the image to cover the entire background without cropping */
+            background-position: center center; /* Center the background image */
+            width: 100%; /* Set the width to 100% to cover the entire screen width */
+            height: 100%;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/ccc8afe9-90d8-49b5-9552-1ba839f654ef.png'); /* Set the same background image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            filter: blur(2px); /* Adjust the blur amount (5px in this example) */
+            z-index: -1; /* Set a negative z-index to place the pseudo-element behind the content */
+        }
+         
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+    <table style="width:100%;height:50px;background-color:rosybrown;text-align:center;font-family:cursive;font-size:20px;border-style:solid;border-radius:5px">
+            <tr>
+                <td>Welcome to Hotel Booking portal</td>
+            </tr>
+        </table>
+        <table style="width:100%;background-color:lightgray;text-align:center;border-style:solid;border-radius:5px">
+            <tr>
+                <td><a href="AdminLogin.aspx">AdminLogin</a></td>
+                <td><a href="OrderFood.aspx">OrderFood</a></td>
+            </tr>
+        </table>
+        <div style="margin:100px;padding:100px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+           <table style="width:100%;background-color:rosybrown;text-align:center;border-style:solid;border-radius:5px;position:absolute">
+            <tr>
+                <td>www.hotels.com@2023</td>
+            </tr>
+        </table>
+        </form>
+</body>
+</html>
